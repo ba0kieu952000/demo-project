@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --color-gray: #a1a1a1;
+  --color-primary: #4444d5;
+  --color-second: #5151c2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +28,66 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.main-content {
+  width: calc(100vw - 320px);
+}
+
+.droppable {
+  height: 100%;
+}
+
+.droppable-has-editor {
+  height: calc(100% - 250px);
+}
+
+.edit-item {
+  height: 250px;
+}
+
+.content-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-side {
+  min-height: calc(100dvh - 60px);
+}
+
+.primary {
+  padding: 8px 12px;
+  border-radius: 16px;
+  background-color: var(--color-primary);
+}
+
+.primary:hover {
+  background-color: var(--color-second);
+}
+
+.input {
+  width: 300px;
+  color: white;
+  background-color: unset;
+  border-radius: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--color-gray);
+}
+
+.input:focus,
+.input:target,
+.input:focus-visible,
+.input:active {
+  outline: unset;
+}
+
+.textarea {
+  min-height: 100px;
+  max-height: 150px;
+  color: white;
+  background-color: unset;
+  border-radius: 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-gray);
 }
