@@ -21,7 +21,11 @@ const reducer = (state: TStateReducer, action: TActionReducer) => {
       return { ...state, isHolding: false };
 
     case ACTION_NAMES.ADD:
-      return { ...state, items: [...items, itemSelector] };
+      return {
+        ...state,
+        items: [...items, itemSelector],
+        itemSelected: itemSelector,
+      };
 
     case ACTION_NAMES.SELECTED:
       return { ...state, itemSelected: itemSelector };
